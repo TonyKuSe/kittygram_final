@@ -11,18 +11,18 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    build: ./backend/
+    image: toniku/kittygram_backend
     env_file: .env.example
     volumes:
       - static:/backend_static
   frontend:
+    image: toniku/kittygram_frontend
     env_file: .env.example
-    build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
   gateway:
-    build: ./nginx/
+    image: toniku/kittygram_gateway
     env_file: .env.example
     ports:
       - 9000:80
