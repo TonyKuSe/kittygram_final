@@ -1,7 +1,7 @@
 # Kittygram final
 
 ## Описание
-Социальная сеть котов
+Социальная сеть котов. Позволяет людям делиться фотографиями и достижениями своих котиков.
 
 **Инструменты и стек:** #Python #Django #Docker-compose #API #Nginx #Gunicorn #Python-dotenv 
 
